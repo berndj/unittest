@@ -23,6 +23,6 @@ if [ ! -d $CUNIT_PATH/include ]; then
     rm -rf CUnit*
 fi
 
-C_INCLUDE_PATH=$CUNIT_PATH/include gcc example.c -Linstall/lib -Wl,-R/home/bernd/unittest/install/lib -lcunit -o example
+C_INCLUDE_PATH=$CUNIT_PATH/include gcc example.c -L$CUNIT_PATH/lib -Wl,-R$CUNIT_PATH/lib -lcunit -o example
 
 ./example
