@@ -1,0 +1,5 @@
+C_INCLUDE_PATH=install/include gcc example.c -Linstall/lib -lcunit
+LD_LIBRARY_PATH=install/lib ./a.out
+
+> C_INCLUDE_PATH=install/include gcc example.c -Linstall/lib -Wl,-R/home/bernd/unittest/install/lib -lcunit
+> ./a.out
